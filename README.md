@@ -7,4 +7,4 @@ Click on green 'Clone or Download' button. After, click 'Download ZIP' button.
 
 Extract/Unzip files.
 
-Then to launch open index.html with your favourite browser(Example: right-click => 'Open-With' => Google Chrome).
+Then to launch website, open index.html with your favourite browser(Example: right-click on index.html => 'Open-With' => Google Chrome).
