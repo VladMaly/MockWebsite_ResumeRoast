@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RR - Sign In</title>
+    <link rel="stylesheet" href="formCss.css">
+    <link rel="stylesheet" href="apocryphon.css">
+    <script src="signIn.js"></script>
+</head>
+<body>
+    <header id="header">
+        <!-- <img class="cover-photo" src="http://www.suitandtiehealth.com/hs-fs/hubfs/suit_black_-_background.jpg?t=1481788246826&width=1920&name=suit_black_-_background.jpg"> -->
+        <div class="cover-black"></div>
+        <div class="header-title"><span id="headerResume">Resume</span><span id="headerRoast"> Roast</span></div>
+        <div id="headerMenu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    <div class="interface">
+        <h1>Login</h1>
+        <form action="profile.html" method="post">
+            <div class="form-element"><input class="input-element" type="email" name="Email" placeholder="Email"autofocus required></div>
+            <div class="form-element"><input class="input-element-with-button" id="inputElementPasswordSignIn" type="password" name="Password" placeholder="Password" required><div class="show-password"><button type="button" onmousedown="revealPassword('inputElementPasswordSignIn')" onmouseup="concealPassword('inputElementPasswordSignIn')">&#8592</button></div></div>
+            <span class="error"><!-- Some Error--></span>
+            <div class="form_element">
+                <input class="submit-button" type="submit" value="Login">
+            </div>
+        </form>
+        <label class="page-link"><a href="signUp.html">Sign Up</a></label>
+    </div>
+
+    <!-- <footer class="footer">
+        <p>Thank you for visting!</p>
+    </footer> -->
+</body>
+<footer>
+    <img class="footer-img" src="http://farmingtonlibraries.org/wp-content/uploads/2015/07/NYC-skyline.jpg">
+</footer>
+</html>

@@ -1,0 +1,59 @@
+.side-panel {
+    float: left;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid black;
+    width: 267px;
+    background-color: black;
+    margin-right: 20px;
+}
+
+.side-panel > h2 {
+    color: Grey;
+    cursor: pointer;
+    cursor: hand; 
+}
+
+.side-panel > h2:hover {
+    color: aliceblue;
+    -webkit-transition:color 500ms linear;
+    -ms-transition: color 500ms linear;
+    transition: color 500ms linear;
+}
+
+.homeScreenImg {
+    height: 200px;
+}
+
+.interfaceBody {
+    margin-top: 1em;
+    text-align: left;
+}
+
+@media screen and (max-width: 950px) {
+    .side-panel {
+        display: none;   
+    }
+}
+
+.interfaceContainer {
+    display: inline-block;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+.alignLeft {
+    text-align: left;
+
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.interfaceBodyEdit {
+    margin-top: 1em;
+    text-align: left;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RR - Sign Up</title>
+    <link rel="stylesheet" href="formCss.css">
+    <link rel="stylesheet" href="apocryphon.css">
+    <script src="signUp.js"></script>
+</head>
+<body>
+    <header id="header">
+        <!-- <img class="cover-photo" src="http://www.suitandtiehealth.com/hs-fs/hubfs/suit_black_-_background.jpg?t=1481788246826&width=1920&name=suit_black_-_background.jpg"> -->
+        <div class="cover-black"></div>
+        <div class="header-title"><span id="headerResume">Resume</span><span id="headerRoast"> Roast</span></div>
+        <div id="headerMenu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    <div class="interface">
+        <h1>Sign Up</h1>
+        <form action="profile.html" id="signUp" method="post" onsubmit="return validateSignUp()">
+            <div class="form-element"><input class="input-element" type="text" name="Full Name" placeholder="Full Name"autofocus required></div>
+            <div class="form-element"><input class="input-element" type="email" name="Email" placeholder="Email" required></div>
+            <div class="form-element"><input onkeyup="onChangeValidateSignUp()" class="input-element-with-button" id="inputElementPassword" type="password" name="Password" placeholder="Password" required><div class="show-password"><button type="button" onmousedown="revealPassword('inputElementPassword')" onmouseup="concealPassword('inputElementPassword')">&#8592</button></div></div>
+            <div class="form-element"><input onkeyup="onChangeValidateSignUp()" class="input-element-with-button" id="inputElementPasswordConfirm" type="password" name="Confirm Password" placeholder="Confirm Password" required><div class="show-password"><button type="button" onmousedown="revealPassword('inputElementPasswordConfirm')" onmouseup="concealPassword('inputElementPasswordConfirm')">&#8592</button></div></div>
+            <span id="error"><!-- Some Error--></span>
+            <div class="containerImgSelection">
+                <p class="fontStyleText">Select Temporary Image:</p>
+                <img class="temp-img tempImg0 temp-img-selected" onclick="onClickImg('tempImg0')" src="https://4.bp.blogspot.com/-At4OLumb838/Vb3YeddHEJI/AAAAAAABuzY/lKrF3It1yzc/s0/Suit_and_Tie_wallpaper.jpg">
+                <img class="temp-img tempImg1" onclick="onClickImg('tempImg1')" src="https://s-media-cache-ak0.pinimg.com/736x/88/8e/af/888eafb37eca28669ab89b8d2589d0ae.jpg">
+                <img class="temp-img tempImg2" onclick="onClickImg('tempImg2')" src="https://www.walldevil.com/wallpapers/w02/805969-agent-47-hitman-pices-suit-tie-tuxedo.jpg">
+            </div>
+            <div>
+                <input form="signUp" class="submit-button" type="submit" value="Submit & Login">
+            </div>
+        </form>
+    <div>
+
+    <!-- <footer class="footer">
+        <p>Thank you for visting!</p>
+    </footer> -->
+</body>
+<footer>
+    <img class="footer-img" src="http://farmingtonlibraries.org/wp-content/uploads/2015/07/NYC-skyline.jpg">
+</footer>
+</html>

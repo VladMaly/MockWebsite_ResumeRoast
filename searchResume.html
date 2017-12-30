@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RR - Search Resumes</title>
+    <link rel="stylesheet" href="apocryphon.css">
+    <link rel="stylesheet" href="searchResume.css">
+    <script src="searchResume.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="searchResumeNg.js"></script>
+</head>
+<body>
+    <header id="header">
+        <!-- <img class="cover-photo" src="https://i.pinimg.com/736x/59/76/16/5976161a79f684f07d7b09721f257583.jpg"> -->
+        <div class="cover-black"></div>
+        <div class="header-title"><span id="headerResume">Resume</span><span id="headerRoast"> Roast</span></div>
+        <div id="headerMenu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    <div ng-app="myApp" ng-controller="myCtrl" class="interface">
+        <div class="resumeList">
+        	<div ng-repeat="user in resumeList">
+            	<div class="eachUserResume" ng-class="{selected : ($parent.chosen.Id -1) == $index}" ng-click="changeChosen(user)"><span>Name: {{user.Name}} </span><span>Date: {{user.Date}} </span>
+                </div>
+            </div>
+        </div>
+        <div class="commentInterface">
+        <!-- src="http://www.peelyouthsuccess.com/documents/136m_Sample%20resumes%20and%20cover%20letters.pdf" -->
+        	<iframe ng-src="{{chosen.pdfFile}}" id="previewPdf" style="width:600px; height:500px;" frameborder="0"></iframe> <!-- ng-src="{{chosen.pdfFile}}" -->
+            <div>
+                <input id="inputPostText" class="input_text test-input_text inputSection test--input_text" type="text">
+                <button type="submit" class="input_button test-input_button submitSection test--input_button" onclick="textPostSubmit()">Text Post</button>
+            </div>
+
+            <div>
+                <input id="inputPostImg" class="inputText inputSection test--photo_url" type="text" value="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg">
+                <button class="submitSection test--photo_button" type="submit" onclick="imgPostSubmit()">Photo Post</button>
+            </div>
+
+            <div class="filterPost">
+                <span>Filter: </span>
+                <select id="filterPosts" onchange="onChangeSelectFilter()">
+                  <option value="0" selected="selected">Show images and text</option>
+                  <option value="1">Show only text posts</option>
+                  <option value="2">Show only image posts</option>
+                </select>
+            <div>
+
+            <h2>Posts for a given resume</h2>
+            <div id="postContainer">
+                <!-- <div class="post test--post postImg"><img class=" postImgElement" src="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg"><article class="postBottom"><button class="postLikeButton test--like_button">Like Button</button><span>Like counter:</span><span id="post0" class="test--like_count">0</span></article></div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RR - Profile</title>
+    <link rel="stylesheet" href="apocryphon.css">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="profile.js"></script>
+    <script src="profileNg.js"></script>
+</head>
+<body ng-app="ProfileApp" ng-controller="ProfileController">
+    <header id="header">
+        <!-- <img class="cover-photo" src="http://www.suitandtiehealth.com/hs-fs/hubfs/suit_black_-_background.jpg?t=1481788246826&width=1920&name=suit_black_-_background.jpg"> -->
+        <div class="cover-black"></div>
+        <div class="header-title"><span id="headerResume">Resume</span><span id="headerRoast"> Roast</span></div>
+        <div id="headerMenu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    <div class="side-panel">
+        <h2 ng-repeat="view in viewList" id="{{view.id}}" ng-click="$parent.menuState = view.state">{{view.name}}</h2>
+        <!-- <h2 class="selectable" id="view1">Upload Resume</h2>
+        <h2 class="selectable" id="view2">Edit Profile Info</h2>
+        <h2 class="selectable" id="view3">Upload Photo Avatar</h2> -->
+    </div>
+    <div class="interfaceBody">
+        <div ng-show="menuState == 'Anonymous'" class="interfaceContainer alignCenter">
+            <h1>Don't be anonymous, sing in, or sign up to have access to profile info.</h1>
+            <img class="homeScreenImg" src="https://tuswallpapersgratis.com/wp-content/plugins/download-wallpaper-resized/wallpaper.php?x=1920&y=1440&file=https://tuswallpapersgratis.com/wp-content/uploads/2013/12/Anonymous-wallpaper.jpg">
+        </div>
+        <div ng-show="menuState == 'Resume'" class="interfaceContainer alignCenter">
+            <div class="alignLeft">
+                <span>Upload pdf document: </span>
+                <input id="resumeUpload" type="file"></input>
+                <div>Validation: <span id="validationMessagePdf">No file has been chosen.</span></div>
+                <!-- <iframe src="D:\Extractions\EngFiles\ENG239_Freud_TheUncanny.pdf" 
+                        style="width:600px; height:500px;" frameborder="0"></iframe> -->
+                <iframe src="" id="previewPdf" 
+                        style="width:600px; height:500px;" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div ng-show="menuState == 'Avatar'" class="interfaceContainer alignCenter">
+            <input id="openImg" type="file"></input><br>
+            <img style="display: none;" id="previewImg" src="" height="200" alt="Image preview...">
+            <div>Validation: <span id="validationMessageImg">No file has been chosen.</span></div>
+        </div>
+    </div>
+    <div class="interfaceBodyEdit">
+        <div ng-show="menuState == 'Edit'" class="interfaceContainer alignLeft">
+            <form id="editReadInfo">
+                <div><span>Profile Name: </span><span class="editReadField">Ragnar</span></div><br>
+                <div><span>Last Name: </span><span class="editReadField">Lodbrok</span></div><br>
+                <div><span>Mail: </span><span class="editReadField">Ragnar@conquest.com</span></div><br>
+                <div><span>Password: </span><span class="editReadField">Odin</span></div><br>
+                <input id="editReadButton" form="editReadInfo" type="submit" value="Edit" onclick="editReadStateChange()">
+            </form>
+        </div>
+    </div>
+</body>
+<footer>
+    <img class="footer-img" src="http://farmingtonlibraries.org/wp-content/uploads/2015/07/NYC-skyline.jpg">
+</footer>
+</html>

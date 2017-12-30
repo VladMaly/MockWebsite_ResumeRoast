@@ -1,0 +1,76 @@
+.form-element {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.page-link {
+    font-size: small;
+}
+
+.page-link > a {
+    color: green !important;
+}
+
+.submit-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.input-element {
+    width: 200px;
+}
+
+.input-element-with-button {
+    width: 170px; 
+    display: inline-block;
+}
+
+.show-password {
+    width: 30px;
+    display: inline-block;
+}
+
+#error {
+    color: red;
+}
+
+.fontStyleText {
+    font-style: oblique;
+    font-family: serif;
+}
+
+.containerImgSelection:hover + div {
+   /* margin-top: 30px;*/
+}
+
+.temp-img {
+    display: inline-block;
+    width: 250px;
+    height: 215px;
+    opacity: 0.6;
+}
+
+.temp-img-selected {
+   /* border-top: 1px green solid; 
+    border-bottom: 1px green solid; 
+    border-left: 2px green solid;
+    border-right: 2px green solid;*/
+    border: 1px green solid; 
+}
+
+.temp-img:hover {
+    opacity: 1.0;
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 300ms linear;
+    -ms-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+} 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The viewport meta tag controls page's dimensions and scaling
+        http://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Roast</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div id="headerMenu">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </ul>
+        </div>
+        <div class="headerSidePanel"> 
+            <div id="headerMenuAlt" class="overLayMenu displayNone" onclick="toggleHeaderMenuAlt()">&#9776</div>
+            <ul id="headerMenuAltDropdown" class="headerMenuAltDropdownSmallScreen displayNone">
+                <a href="index.html">Home</a>
+                <a href="searchResume.html">Search Resumes</a>
+                <a href="profile.html">Profile</a>
+                <a href="signIn.html">Sign In</a>
+                <a href="signUp.html">Sign Up</a>
+            </ul>
+        </div>
+        <a id="referTop" class="overLayMenu displayNone" href="#header">Top</a>
+    </header>
+    <div class="homeImg"></div>
+    <div class="middle-page-text-home middle-page-text">Welcome. To Resume Roast.</div>
+    <div class="info-between-container">
+        <h2 class="info-between-mission-statements-heading">Our members are dedicated to give you a platform to improve your image:</h2>
+        <ul class="info-between-mission-statements">
+            <li class="sliding-middle-out">Get experience from those who have experience</li>
+            <li class="sliding-middle-out">Easy to use migration from LinkedIn</li>
+            <li class="sliding-middle-out">Small community that really cares</li>
+            <li class="sliding-middle-out">Filter through hundreds of posts to see only what is relevant to you.</li>
+            <li class="sliding-middle-out">Improve the community around the world</li>
+            <li class="sliding-middle-out">Recieve feedback from employees and employers</li>
+            <li class="sliding-middle-out">Algorithm that helps you come into contact with resources that matter</li>
+            <li class="sliding-middle-out">An algorithm based approach to viewing what is relevant first</li>
+        </ul>
+    </div>
+    <div class="homeImg2"></div>
+    <div class="middle-page-text-page2 middle-page-text">Continuous improvement is better then delayed perfection. -Mark Twain</div>
+    <!-- <div class="info-between-container">
+        <h2></h2>
+    </div> -->
+    <div class="homeImg3"></div>
+    <!-- <div class="middle-page-text-page3">Improvement begins with Resume Roast.</div> -->
+</body>
+<footer id="footer" class="middle-page-text">
+    <div class="footerText">Improvement begins with Resume Roast. Join today.</div>
+    <div>
+        <i class="fa box-highlight fa-facebook-official"></i>
+        <i class="fa box-highlight fa-instagram"></i>
+        <i class="fa box-highlight fa-snapchat"></i>
+        <i class="fa box-highlight fa-pinterest-p"></i>
+        <i class="fa box-highlight fa-twitter"></i>
+        <i class="fa box-highlight fa-linkedin"></i>
+  </div>
+</footer>
+</html>

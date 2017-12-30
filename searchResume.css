@@ -1,0 +1,89 @@
+.post {
+    border-radius: 10.5px;
+    padding-left: 20px;
+    width: 29%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 5px;
+
+}
+
+.postText {
+    border: 1.5px solid green;
+}
+
+.postImg {
+    border: 1.5px solid violet;
+}
+
+.postImgElement {
+    height: 140px;
+}
+
+.overflowText {
+    height: 112px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+.postBottom {
+    margin-bottom: 3px;
+}
+
+.postLikeButton {
+    margin-right: 3px;
+}
+
+@media screen and (min-width: 1100px) {
+    .post {
+        width: 29%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .post {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .post {
+        width: 80%;
+    }
+}
+
+.resumeSelected {
+    background-color: Green;
+}
+
+.resumeList {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: larger;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.eachUserResume {
+    border: 1px #2700ff solid;
+    margin: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: green;
+}
+
+.commentInterface {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+#postContainer {
+    font-size: initial;
+}

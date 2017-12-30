@@ -1,0 +1,96 @@
+			$scope.postCounter = 0;
+			// 0 for display both image and text
+
+			$scope.changeChosen = function(obj) {
+				var postEl = document.getElementById("postContainer");
+				for (let i = 0; i < $scope.resumeList.length; i++) {
+					if ($scope.resumeList[i].Id == $scope.chosen.Id) {
+						$scope.resumeList[i].PostCounter = $scope.postCounter;
+						$scope.resumeList[i].Posts = postEl.innerHTML;
+					}
+				}
+				$scope.chosen = obj;
+
+				function stringToEl(string) {
+			    	var parser = new DOMParser(),
+			        content = 'text/html',
+			        DOM = parser.parseFromString(string, content);
+
+				    // return element
+				    return DOM.body.childNodes[0];
+				}
+
+				postEl.innerHTML = "";
+				postEl.appendChild(	$scope.chosen.Posts);
+				$scope.postCounter = $scope.chosen.PostCounter;
+			};
+
+			$scope.changeChosen = function () {
+			    var insertText = document.getElementById("inputPostText").value;
+			    insertText.localeCompare("Hello") == 0 ? window.alert("Morning user") : createMessage(insertText, true); 
+			}
+
+			$scope.imgPostSubmit = function () {
+			    var insertImg = document.getElementById("inputPostImg").value;
+			   	createMessage(insertImg, false); 
+			}
+
+			$scope.createMessage = function (insertField, isTextMessage) {
+				var section = document.createElement("DIV");
+				section.className += "post";
+				section.className += " test--post";
+				if (isTextMessage) {
+					currentFilter == 0 || currentFilter == 1 ? section.style.display = "" : section.style.display = "none";
+					section.className += " postText";
+					var para = document.createElement("p");
+					para.innerHTML = insertField;
+					para.className += "overflowText";
+					para.className += " test--post_content";
+				}
+				else {
+					currentFilter == 0 || currentFilter == 2 ? section.style.display = "" : section.style.display = "none";
+					section.className += " postImg";
+					// Create img with insertField as the ref link
+					//<img class="marginLeftHeader profilePhoto" src="kristen.jpg">
+					var img = document.createElement("img");
+					img.className += " postImgElement";
+					img.setAttribute('src', insertField);
+				}
+				var article = document.createElement("article");
+				article.className += "postBottom";
+
+				var button = document.createElement("button");
+				button.className += "postLikeButton";
+				button.innerHTML = "Like Button";
+				button.className += " test--like_button";
+				/*button.addEventListener("click", function(e) {
+			    	upVote(postCounter);
+				}, false);*/
+				var postNumberString = "post" + $scope.postCounter;
+				button.onclick = function() {
+					upVote(postNumberString);
+				};
+
+				var span = document.createElement("span");
+				span.innerHTML = "Like counter:";
+
+				var spanCounter = document.createElement("span");
+				spanCounter.innerHTML = "0";
+				spanCounter.setAttribute("id", "post" + $scope.postCounter)
+				spanCounter.className += "test--like_count";
+				$scope.postCounter++;
+
+				// Add elements from depth first up
+				article.appendChild(button);
+				article.appendChild(span);
+				article.appendChild(spanCounter);
+				isTextMessage ? section.appendChild(para) : section.appendChild(img);
+				section.appendChild(article);
+
+				// finally output created structure
+				var postContainer = document.getElementById("postContainer");
+				postContainer.appendChild(section);
+				
+				/*var postContainer = document.getElementById("postContainer");
+				postContainer.insertAdjacentHTML('beforeend', '<div id="two">two</div>');*/
+			}
