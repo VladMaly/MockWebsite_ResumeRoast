@@ -8,3 +8,5 @@ Click on green 'Clone or Download' button. After, click 'Download ZIP' button.
 Extract/Unzip files.
 
 Then to launch website, open index.html with your favourite browser(Example: right-click on index.html => 'Open-With' => Google Chrome).
+
+![github1](https://user-images.githubusercontent.com/34944774/38452954-fa9264f6-3a1b-11e8-9c41-2bcf91c805c4.png)
